@@ -1,10 +1,9 @@
-// app.js - Main entry point
+let game;
 
-document.addEventListener("DOMContentLoaded", async function () {
-    const app = document.getElementById("app");
-    if (app) {
-        const { Game } = await import("./game/game.js");
-        const game = new Game();
-        game.render(app);
-    }
+document.addEventListener("DOMContentLoaded", async () => {
+    const { Game } = await import("./game/game.js");
+
+    game = new Game();
+    game.initialize();
+    game.render();
 });
