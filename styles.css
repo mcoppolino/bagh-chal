@@ -1,0 +1,31 @@
+/* Board container */
+.board {
+    position: relative;
+    background-color: white;
+    border: 2px solid black;
+}
+
+/* Grid lines */
+.grid-line {
+    position: absolute;
+    background-color: black;
+}
+
+.grid-line.horizontal {
+    width: 100%;
+    height: 2px;
+}
+
+.grid-line.vertical {
+    width: 2px;
+    height: 100%;
+}
+
+/* Diagonal lines */
+.diagonal-line {
+    position: absolute;
+    width: calc(1.414 * 50px); /* Adjust for tileSize */
+    height: 2px;
+    background-color: black;
+    transform-origin: top left;
+}
